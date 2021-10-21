@@ -1,6 +1,8 @@
 import React, { useEffect, useState } from "react";
 import { useParams } from "react-router";
+import QuizSection from "../components/QuizSection";
 import SideBar from "../components/SideBar";
+import VideoSection from "../components/VideoSection";
 import YoutubeVideoSection from "../components/YoutubeVideoSection";
 import Page from "./Page";
 
@@ -12,7 +14,7 @@ export default function LessonPage() {
 
   useEffect(() => {
     loadLesson();
-  // eslint-disable-next-line react-hooks/exhaustive-deps
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
   const loadLesson = () => {
@@ -55,6 +57,10 @@ export default function LessonPage() {
     switch (section.type) {
       case "YoutubeVideo":
         return <YoutubeVideoSection section={section} />;
+      case "Video":
+        return <VideoSection section={section} />;
+      case "Quiz":
+        return <QuizSection section={section} />;
       default:
         return <div>Unknown section type</div>;
     }
