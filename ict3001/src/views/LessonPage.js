@@ -13,15 +13,29 @@ export default function LessonPage() {
   const [sections, setSections] = useState([]);
 
   useEffect(() => {
+    // const script = document.createElement("script");
+
+    // script.src = "https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js";
+    // script.id = "MathJax-script";
+    // script.async = true;
+
+    // document.body.appendChild(script);
+
+    // const script2 = document.createElement("script");
+
+    // script2.src = "https://polyfill.io/v3/polyfill.min.js?features=es6";
+
+    // document.body.appendChild(script2);
+
     loadLesson();
+
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
   const loadLesson = () => {
-    fetch("/LessonData/" + lessonName + ".json")
+    fetch("/Data/Lessons/" + lessonName + ".json")
       .then((r) => r.json())
       .then((data) => {
-        console.log(data);
         setSections(data.sections);
         setLessonLoaded(1);
       })

@@ -4,19 +4,25 @@
         {
             "name": "Video 1",
             "type": "YoutubeVideo",
-            "videoUrl": "https://www.youtube.com/embed/9yJuzIN-w5k?autoplay=1",
+            "link": "https://www.youtube.com/embed/9yJuzIN-w5k?autoplay=1",
             "description": "Video 1Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed eget lacus quis felis condimentum porta nec dignissim nibh. Cras vitae ipsum nibh. Nam nunc augue, placerat ut est quis, iaculis faucibus dolor. Pellentesque varius sodales sapien, eget facilisis justo ornare non. Suspendisse tellus sem, aliquet id odio at, porta dignissim nisi. Pellentesque hendrerit facilisis nibh vel dictum. Aenean eget massa scelerisque, posuere felis commodo, egestas lorem. Aliquam eu magna ut ex ultricies fermentum. Curabitur quis mollis nisl. Sed hendrerit dapibus augue, ut sagittis magna congue eu. Proin volutpat sodales finibus."
         },
         {
             "name": "Video 2",
             "type": "YoutubeVideo",
-            "videoUrl": "https://www.youtube.com/embed/dQw4w9WgXcQ?autoplay=1",
+            "link": "https://www.youtube.com/embed/dQw4w9WgXcQ?autoplay=1",
             "description": "Video 2Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed eget lacus quis felis condimentum porta nec dignissim nibh. Cras vitae ipsum nibh. Nam nunc augue, placerat ut est quis, iaculis faucibus dolor. Pellentesque varius sodales sapien, eget facilisis justo ornare non. Suspendisse tellus sem, aliquet id odio at, porta dignissim nisi. Pellentesque hendrerit facilisis nibh vel dictum. Aenean eget massa scelerisque, posuere felis commodo, egestas lorem. Aliquam eu magna ut ex ultricies fermentum. Curabitur quis mollis nisl. Sed hendrerit dapibus augue, ut sagittis magna congue eu. Proin volutpat sodales finibus."
         },
         {
-            "name": "Video 3",
-            "type": "YoutubeVideo",
-            "videoUrl": "https://www.youtube.com/embed/9yJuzIN-w5k?autoplay=1",
+            "name": "Video 4",
+            "type": "Video",
+            "link": "fakevideo.mp4",
+            "description": "Video 3Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed eget lacus quis felis condimentum porta nec dignissim nibh. Cras vitae ipsum nibh. Nam nunc augue, placerat ut est quis, iaculis faucibus dolor. Pellentesque varius sodales sapien, eget facilisis justo ornare non. Suspendisse tellus sem, aliquet id odio at, porta dignissim nisi. Pellentesque hendrerit facilisis nibh vel dictum. Aenean eget massa scelerisque, posuere felis commodo, egestas lorem. Aliquam eu magna ut ex ultricies fermentum. Curabitur quis mollis nisl. Sed hendrerit dapibus augue, ut sagittis magna congue eu. Proin volutpat sodales finibus."
+        },
+        {
+            "name": "Quiz 1",
+            "type": "Quiz",
+            "link": "questions01.txt",
             "description": "Video 3Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed eget lacus quis felis condimentum porta nec dignissim nibh. Cras vitae ipsum nibh. Nam nunc augue, placerat ut est quis, iaculis faucibus dolor. Pellentesque varius sodales sapien, eget facilisis justo ornare non. Suspendisse tellus sem, aliquet id odio at, porta dignissim nisi. Pellentesque hendrerit facilisis nibh vel dictum. Aenean eget massa scelerisque, posuere felis commodo, egestas lorem. Aliquam eu magna ut ex ultricies fermentum. Curabitur quis mollis nisl. Sed hendrerit dapibus augue, ut sagittis magna congue eu. Proin volutpat sodales finibus."
         }
     ]

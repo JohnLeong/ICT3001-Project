@@ -7,8 +7,8 @@ export default function YoutubeVideoSection(props) {
       <div style={{ display: "flex", justifyContent: "center" }}>
         <iframe
           className="youtube-video"
-          title={props.section.videoUrl}
-          src={props.section.videoUrl}
+          title={props.section.link}
+          src={props.section.link}
           allow='autoplay'
         ></iframe>
       </div>
