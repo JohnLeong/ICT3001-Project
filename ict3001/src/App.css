@@ -36,3 +36,72 @@
     transform: rotate(360deg);
   }
 }
+
+.navbar {
+  background-color: cyan;
+  text-align: center;
+  line-height: 50px;
+  height: 50px;
+  overflow: hidden;
+  position: fixed; /* Set the navbar to fixed position */
+  top: 0; /* Position the navbar at the top of the page */
+  width: 100%; /* Full width */
+}
+
+.main-content{
+  margin-top: 50px;
+}
+
+.sidebar {
+  margin: 0;
+  padding: 0;
+  width: 200px;
+  background-color: #f1f1f1;
+  position: fixed;
+  height: 100%;
+  overflow: auto;
+}
+
+/* Sidebar links */
+.sidebar p {
+  display: block;
+  color: black;
+  padding: 16px;
+  text-decoration: none;
+  margin: 0px;
+  background-color: #dddddd;
+}
+
+/* Active/current link */
+.sidebar p.active {
+  background-color: #04aa6d;
+  color: white;
+}
+
+/* Links on mouse-over */
+.sidebar p:hover:not(.active) {
+  background-color: #555;
+  color: white;
+}
+
+/* Page content. The value of the margin-left property should match the value of the sidebar's width property */
+div.content {
+  margin-left: 200px;
+  padding: 16px 16px;
+}
+
+iframe.youtube-video {
+  width: 800px; 
+  height: 450px; /* 100/56.25 = 560/315 = 1.778 */
+}
+
+.video-description {
+  width: 100%;
+  background-color: lightgray;
+  padding: 5px;
+  margin-top: 10px;
+}
+
+.video-description p{
+  margin: 0px;
+}

@@ -1,6 +1,5 @@
-import logo from "./logo.svg";
 import "./App.css";
-import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
+import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 
 /* Import pages */
 import HomePage from "./views/HomePage";
@@ -11,7 +10,7 @@ function App() {
     <Router>
         <Switch>
           <Route exact path="/" component={HomePage} />
-          <Route path="/Lesson/:lessonId" component={LessonPage} />
+          <Route path="/Lesson/:lessonName" component={LessonPage} />
         </Switch>
     </Router>
   );

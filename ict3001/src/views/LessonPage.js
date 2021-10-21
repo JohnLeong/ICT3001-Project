@@ -1,15 +1,35 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { useParams } from "react-router";
+import SideBar from "../components/SideBar";
+import YoutubeVideoSection from "../components/YoutubeVideoSection";
 import Page from "./Page";
 
 export default function LessonPage() {
+  const { lessonName } = useParams();
   const [lessonLoaded, setLessonLoaded] = useState(0);
-  const { lessonId } = useParams();
+  const [currentSectionIndex, setCurrentSectionIndex] = useState(0);
+  const [sections, setSections] = useState([]);
 
-  const loadLesson = () => {};
+  useEffect(() => {
+    loadLesson();
+  // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, []);
+
+  const loadLesson = () => {
+    fetch("/LessonData/" + lessonName + ".json")
+      .then((r) => r.json())
+      .then((data) => {
+        console.log(data);
+        setSections(data.sections);
+        setLessonLoaded(1);
+      })
+      .catch(() => {
+        console.log("Failed to load lesson");
+        setLessonLoaded(2);
+      });
+  };
 
   const renderLesson = () => {
-
     switch (lessonLoaded) {
       case 0:
         return renderLoading();
@@ -23,14 +43,31 @@ export default function LessonPage() {
   };
 
   const renderLoading = () => {
-    return(<div>Loading lesson...</div>);
+    return <div>Loading lesson...</div>;
   };
 
-  const renderLoadFailed = () => {};
+  const renderLoadFailed = () => {
+    return <div>Failed to load lesson!</div>;
+  };
 
   const renderLoaded = () => {
-    return(<div>Failed to load lesson!</div>);
+    const section = sections[currentSectionIndex];
+    switch (section.type) {
+      case "YoutubeVideo":
+        return <YoutubeVideoSection section={section} />;
+      default:
+        return <div>Unknown section type</div>;
+    }
   };
 
-  return (<Page>{renderLesson()}</Page>);
+  return (
+    <Page title="Lesson">
+      <SideBar
+        sections={sections}
+        currentSectionIndex={currentSectionIndex}
+        setCurrentSectionIndex={setCurrentSectionIndex}
+      />
+      <div className="content">{renderLesson()}</div>
+    </Page>
+  );
 }
