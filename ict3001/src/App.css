@@ -49,6 +49,17 @@
   z-index: 10;
 }
 
+/* unvisited link */
+.navbar-link:link,
+.navbar-link:visited,
+.navbar-link:hover,
+.navbar-link:active{
+  text-decoration: none;
+  font-size: larger;
+  color: black;
+}
+
+
 .main-content{
   margin-top: 50px;
 }
@@ -64,7 +75,7 @@
 }
 
 /* Sidebar links */
-.sidebar p {
+.sidebar span {
   display: block;
   color: black;
   padding: 16px;
@@ -73,14 +84,19 @@
   background-color: #dddddd;
 }
 
+.sidebar span * {
+  display: inline;
+  margin-left: 10px;
+}
+
 /* Active/current link */
-.sidebar p.active {
+.sidebar span.active {
   background-color: #04aa6d;
   color: white;
 }
 
 /* Links on mouse-over */
-.sidebar p:hover:not(.active) {
+.sidebar span:hover:not(.active) {
   background-color: #555;
   color: white;
 }
@@ -204,3 +220,5 @@ iframe.youtube-video {
   margin-left: auto;
   margin-right: auto;
 }
+
+/* Home page */
