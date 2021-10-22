@@ -81,7 +81,7 @@ export default function LessonPage() {
   };
 
   return (
-    <Page title="Lesson">
+    <Page title={"Lesson: " + lessonName}>
       <SideBar
         sections={sections}
         currentSectionIndex={currentSectionIndex}

@@ -82,6 +82,8 @@
   text-decoration: none;
   margin: 0px;
   background-color: #dddddd;
+  border-top: grey 1px solid;
+  border-bottom: grey 1px solid;
 }
 
 .sidebar span * {
