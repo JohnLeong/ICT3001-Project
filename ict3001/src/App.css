@@ -42,6 +42,8 @@
   text-align: center;
   line-height: 50px;
   height: 50px;
+  font-size:30px; /* Size Improve */
+  font-weight:bold; /*Bold Font*/
   overflow: hidden;
   position: fixed; /* Set the navbar to fixed position */
   top: 0; /* Position the navbar at the top of the page */
@@ -224,3 +226,30 @@ iframe.youtube-video {
 }
 
 /* Home page */
+#leftBar{
+  position: fixed;
+  font-size: 40px;
+  background-color: #DDD;
+  font-weight: 500;
+  
+  top:0px;
+  bottom: 0;
+  width:200px;
+  writing-mode: vertical-rl;
+  text-orientation: upright;
+  text-align: center;
+}
+#containerA{
+  position:relative;            
+  margin-left: 210px;
+  font-size: 25px;
+}
+
+/* Useless
+#itemName{
+  font-size: 5000px;
+}
+#itemDesc{
+  font-size:xx-large;
+}
+*/

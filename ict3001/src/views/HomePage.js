@@ -2,6 +2,7 @@ import React, { useEffect } from "react";
 import { Link } from "react-router-dom";
 import { useState } from "react/cjs/react.development";
 import Page from "./Page";
+import "../App.css";
 
 export default function HomePage() {
   const [lessons, setLessons] = useState([]);
@@ -24,10 +25,12 @@ export default function HomePage() {
   };
 
   return (
-    <Page title="Maths Academy">
+    <Page id="topTitle" title="Maths Academy">
+      <div id="leftBar">Maths Academy</div>
       {
+        
         lessons.map((item) => {
-          return (<div><Link to={"/lesson" + item.link}>{item.name}</Link><p>{item.description}</p></div>)
+          return (<div id="containerA"><Link to={"/lesson" + item.link}><p id ="topicName">{item.name}</p></Link><p id ="topicDesc">{item.description}</p></div>)
         })
       }
     </Page>
