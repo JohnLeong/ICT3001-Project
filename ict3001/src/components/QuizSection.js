@@ -34,6 +34,11 @@ export default function QuizSection(props) {
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
+  useEffect(() => {
+    loadQuestions();
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [props.section]);
+
   const loadQuestions = () => {
     readQuestionsFromFile("/Data/Questions/" + props.section.link)
       .then((data) => {
