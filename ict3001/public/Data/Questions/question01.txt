@@ -1,0 +1,15 @@
+#Question
+Let g be a vector-valued function defined by \[g(t) = (5t + 4, 2t^3)\]
+Find \[g'(t)\]
+
+#Option
+\[(0, 6t^2)\]
+#Option
+\[(5, 1)\]
+#Option
+\[(0, 0)\]
+#Option correct
+\[(5, 6t^2)\]
+
+#Solution
+There is no solution

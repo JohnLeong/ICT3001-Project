@@ -1,0 +1,21 @@
+#Question
+Consider the curve of a vector-valued function with the following parameters:
+\[x = {-5 \over t^2}\]
+\[y = {e^{-t}}\]
+Which integral gives the arc length of the curve over the interval from 
+\(t = -5\) to \(t = 0\)?
+
+#Option
+\[0\]
+#Option correct
+\[\int_{-5}^0 {\sqrt{({100 \over t^6}) + ({e^{2t}})}}\ dt\]
+
+#Solution
+\[x = {-{5 \over t^2}}\]
+\[y = e^{-t}\]
+\[Range: -5 \le t \le 0\]
+\[{dx \over dt} = {10 \over t^3}\]
+\[{dx \over dt} = {-e^{-t}}\]
+\[\int_{-5}^0 {\sqrt{({dx \over dt})^2 + ({dy \over dt})^2}}\ dt\]
+\[= \int_{-5}^0 {\sqrt{({10 \over t^3})^2 + ({-e^{-t}})^2}}\ dt\]
+\[= \int_{-5}^0 {\sqrt{({100 \over t^6}) + ({e^{2t}})}}\ dt\]

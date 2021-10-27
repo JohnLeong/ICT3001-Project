@@ -3,11 +3,11 @@ Let g be a vector-valued function defined by \[g(t) = (5t + 4, 2t^3)\]
 Find \[g'(t)\]
 
 #Option
-\[(5, 6t^2)\]
+\[(0, 6t^2)\]
 #Option
-\[(5, 6t^2)\]
+\[(5, 1)\]
 #Option
-\[(5, 6t^2)\]
+\[(0, 0)\]
 #Option correct
 \[(5, 6t^2)\]
 
@@ -24,7 +24,7 @@ Which integral gives the arc length of the curve over the interval from
 \(t = -5\) to \(t = 0\)?
 
 #Option
-\[\int_{-5}^0 {\sqrt{({100 \over t^6}) + ({e^{2t}})}}\ dt\]
+\[0\]
 #Option correct
 \[\int_{-5}^0 {\sqrt{({100 \over t^6}) + ({e^{2t}})}}\ dt\]
 
@@ -47,9 +47,9 @@ Consider the parametric curve:
 What is the arc length of the curve over the interval of \(t = 0\) to \(t = 14\)?
 
 #Option
-\[\int_{-5}^0 {\sqrt{({100 \over t^6}) + ({e^{2t}})}}\ dt\]
+\[0\]
 #Option
-\[\int_{-5}^0 {\sqrt{({100 \over t^6}) + ({e^{2t}})}}\ dt\]
+\[1\]
 #Option correct
 \[\int_{-5}^0 {\sqrt{({100 \over t^6}) + ({e^{2t}})}}\ dt\]
 
