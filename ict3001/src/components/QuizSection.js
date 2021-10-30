@@ -2,13 +2,12 @@ import React, { useEffect, useState } from "react";
 import "../App.css";
 import { readQuestionsFromFile } from "../utility/QuestionReader";
 import Latex from "./Latex";
-// import { MathComponent } from 'mathjax-react'
-// var Latex = require('react-latex');
 
 export default function QuizSection(props) {
   const [lessonLoaded, setLessonLoaded] = useState(0);
   const [questions, setQuestions] = useState([]);
   const [revealed, setRevealed] = useState([]);
+  const [submitted, setSubmitted] = useState([]);
   const [selected, setSelected] = useState([]);
 
   useEffect(() => {
@@ -44,9 +43,11 @@ export default function QuizSection(props) {
       .then((data) => {
         let newRevealed = [];
         let newSelected = [];
+        let newSubmitted = [];
         data.forEach((item) => {
           newRevealed.push(false);
           newSelected.push(-1);
+          newSubmitted.push(false);
           for (let i = 0; i < item.options.length; ++i) {
             if (item.options[i].correct === true) {
               item.correctIndex = i;
@@ -57,6 +58,7 @@ export default function QuizSection(props) {
         setQuestions(data);
         setRevealed(newRevealed);
         setSelected(newSelected);
+        setSubmitted(newSubmitted);
         setLessonLoaded(1);
         console.log(data);
       })
@@ -87,33 +89,41 @@ export default function QuizSection(props) {
     return <div>Failed to load lesson!</div>;
   };
 
+  const submitAnswer = (index) => {
+    let newSubmit = [...submitted];
+    newSubmit[index] = true;
+
+    setSubmitted(newSubmit);
+  };
+
   const revealSolution = (index) => {
     let newReveal = [...revealed];
     newReveal[index] = !newReveal[index];
 
     setRevealed(newReveal);
-
-    console.log(typeof(selected[index]));
-    console.log(typeof(questions[index].correctIndex));
   };
 
   const onOptionSelected = (event, questionIndex) => {
     let newSelected = [...selected];
     newSelected[questionIndex] = parseInt(event.target.value);
-
     setSelected(newSelected);
+
+    let newSubmit = [...submitted];
+    newSubmit[questionIndex] = false;
+
+    setSubmitted(newSubmit);
   };
 
   const getLabelColorClass = (questionIndex, optionIndex) => {
-    if (!revealed[questionIndex] || optionIndex !== selected[questionIndex]){
-        return "";
+    if (!submitted[questionIndex] || optionIndex !== selected[questionIndex]) {
+      return "";
     }
     if (optionIndex === questions[questionIndex].correctIndex) {
-        return "correct-option";
+      return "correct-option";
     } else {
-        return "wrong-option";
+      return "wrong-option";
     }
-  }
+  };
 
   const renderLoaded = () => {
     return (
@@ -133,8 +143,7 @@ export default function QuizSection(props) {
                     return (
                       <label
                         className={
-                          "rad-label " +
-                          getLabelColorClass(index, optionIndex)
+                          "rad-label " + getLabelColorClass(index, optionIndex)
                         }
                         key={"Option" + optionIndex}
                       >
@@ -153,11 +162,24 @@ export default function QuizSection(props) {
 
                 <button
                   onClick={() => {
-                    revealSolution(index);
+                    submitAnswer(index);
                   }}
                 >
-                  {!revealed[index] ? "Reveal solution" : "Hide solution"}
+                  Submit
                 </button>
+
+                <br/>
+
+                {submitted[index] && (
+                  <button
+                    onClick={() => {
+                      revealSolution(index);
+                    }}
+                  >
+                    {!revealed[index] ? "Reveal solution" : "Hide solution"}
+                  </button>
+                )}
+
                 {revealed[index] === true && (
                   <div className="question-solution">{question.solution}</div>
                 )}
