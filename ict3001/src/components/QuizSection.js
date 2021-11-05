@@ -44,6 +44,7 @@ export default function QuizSection(props) {
         let newRevealed = [];
         let newSelected = [];
         let newSubmitted = [];
+        data = [data[Math.floor(Math.random() * data.length)]]
         data.forEach((item) => {
           newRevealed.push(false);
           newSelected.push(-1);
