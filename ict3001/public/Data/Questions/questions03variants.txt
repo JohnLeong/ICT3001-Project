@@ -1,0 +1,101 @@
+#Question
+Consider the curve of a vector-valued function with the following parameters:
+\[x = 3 cos(t)\]
+\[y = 3 sin(t)\]
+What is the arc length of the curve over the integral from t = 0 to t = 4?
+
+#Option
+\[3\]
+#Option
+\[9\]
+#Option
+\[6\]
+#Option correct
+\[12\]
+
+#Solution
+\[x = 3 cos(t)\] 
+\[y = 3 sin(t)\]
+\[Range: 0 \le t \le 4\]
+\[{dx \over dt} = -3 sin(t)\]
+\[{dy \over dt} = 3 cos(t)\]
+\[Arc\ Length = \int_{-2}^2 {\sqrt{({dx \over dt})^2 + ({dy \over dt})^2}}\ dt\]
+\[= \int_{0}^4 {\sqrt{[-3 sin(t)]^2 + [3 cos(t)]^2}}\ dt\]
+\[= \int_{0}^4 {\sqrt{9 sin^2(t) + 9 cos^2(t)}} dt\]
+\[= \int_{0}^4 {\sqrt{9[sin^2(t) + cos^2(t)]}} dt\]
+\[= \int_{0}^4 \sqrt{9(1)} dt\]
+\[= \int_{0}^4 \sqrt{9} dt\]
+\[= \int_{0}^4 3 dt\]
+\[= [3t]_{0}^4\]
+\[= 3(4) - 3(0)\]
+\[= 12\]
+
+#---------------------------------------------------------------------------------------------------
+
+#Question
+Consider the curve of a vector-valued function with the following parameters:
+\[x = 9 sin(t)\]
+\[y = 9 cos(t)\]
+What is the arc length of the curve over the integral from t = 4 to t = 10?
+
+#Option correct
+\[54\]
+#Option
+\[90\]
+#Option
+\[36\]
+#Option
+\[48\]
+
+#Solution
+\[x = 9 sin(t)\] 
+\[y = 9 cos(t)\]
+\[Range: 0 \le t \le 4\]
+\[{dx \over dt} = 9 cos(t)\]
+\[{dy \over dt} = -9 sin(t)\]
+\[Arc\ Length = \int_{-2}^2 {\sqrt{({dx \over dt})^2 + ({dy \over dt})^2}}\ dt\]
+\[= \int_{4}^{10} {\sqrt{[9 cos(t)]^2 + [-9 sin(t)]^2}}\ dt\]
+\[= \int_{4}^{10} {\sqrt{81 cos^2(t) + 81 sin^2(t)}} dt\]
+\[= \int_{4}^{10} {\sqrt{81[cos^2(t) + sin^2(t)]}} dt\]
+\[= \int_{4}^{10} \sqrt{81(1)} dt\]
+\[= \int_{4}^{10} \sqrt{81} dt\]
+\[= \int_{4}^{10} 9 dt\]
+\[= [9t]_{4}^{10}\]
+\[= 9(10) - 9(4)\]
+\[= 90 - 36\]
+\[= 54\]
+
+#---------------------------------------------------------------------------------------------------
+
+#Question
+Consider the curve of a vector-valued function with the following parameters:
+\[x = 9 sin(t)\]
+\[y = 9 cos(t)\]
+What is the arc length of the curve over the integral from t = 4 to t = 10?
+
+#Option
+\[20\]
+#Option correct
+\[12\]
+#Option
+\[8\]
+#Option
+\[54\]
+
+#Solution
+\[x = 4 sin(t)\] 
+\[y = 4 cos(t)\]
+\[Range: 2 \le t \le 5\]
+\[{dx \over dt} = 4 cos(t)\]
+\[{dy \over dt} = -4 sin(t)\]
+\[Arc\ Length = \int_{-2}^2 {\sqrt{({dx \over dt})^2 + ({dy \over dt})^2}}\ dt\]
+\[= \int_{2}^5 {\sqrt{[4 cos(t)]^2 + [-4 sin(t)]^2}}\ dt\]
+\[= \int_{2}^5 {\sqrt{16 cos^2(t) + 16 sin^2(t)}} dt\]
+\[= \int_{2}^5 {\sqrt{16[cos^2(t) + sin^2(t)]}} dt\]
+\[= \int_{2}^5 \sqrt{16(1)} dt\]
+\[= \int_{2}^5 \sqrt{16} dt\]
+\[= \int_{2}^5 4 dt\]
+\[= [4t]_{2}^5\]
+\[= 4(5) - 4(2)\]
+\[= 20 - 8\]
+\[= 12\]
