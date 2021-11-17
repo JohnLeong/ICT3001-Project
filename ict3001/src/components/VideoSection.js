@@ -17,7 +17,7 @@ export default function VideoSection(props) {
   return (
     <div>
       <video width="608" height="342" controls className="video">
-        <source src={"/Videos/" + videoLink} type="video/mp4" />
+        <source src={"/Videos/" + props.section.link} type="video/mp4" />
         Your browser does not support the video tag.
       </video>
       <div className="video-description">
