@@ -34,6 +34,11 @@ export default function QuizSection(props) {
   }, []);
 
   useEffect(() => {
+    setLessonLoaded(0);
+    setQuestions([]);
+    setRevealed([]);
+    setSubmitted([]);
+    setSelected([]);
     loadQuestions();
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [props.section]);
