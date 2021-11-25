@@ -9,6 +9,7 @@ export default function QuizSection(props) {
   const [revealed, setRevealed] = useState([]);
   const [submitted, setSubmitted] = useState([]);
   const [selected, setSelected] = useState([]);
+  const [formulaSheet, setFormula] = useState([false]);
 
   useEffect(() => {
     loadQuestions();
@@ -43,6 +44,10 @@ export default function QuizSection(props) {
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [props.section]);
 
+  function operation()
+  {
+    alert("Hi");
+  }
   const loadQuestions = () => {
     readQuestionsFromFile("/Data/Questions/" + props.section.link)
       .then((data) => {
@@ -138,7 +143,14 @@ export default function QuizSection(props) {
           {questions.map((question, index) => {
             return (
               <div className="question-section" key={"Q" + index}>
-                <p className="question-heading">Question {index + 1}</p>
+                <p className="question-heading">Question {index + 1}
+                {
+                  
+                <img id="formulaImg" src={"/Data/formula.jpg"}alt=""/>
+                }
+                <button id="formulaBtn" onClick={()=>operation()}>Formula</button>
+                
+                </p>
                 <p className="question-text">{question.questionText}</p>
 
                 <div
