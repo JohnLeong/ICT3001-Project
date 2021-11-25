@@ -9,7 +9,7 @@ export default function QuizSection(props) {
   const [revealed, setRevealed] = useState([]);
   const [submitted, setSubmitted] = useState([]);
   const [selected, setSelected] = useState([]);
-  const [formulaSheet, setFormula] = useState([]);
+  const [showFormula, setShowFormula] = useState(false);
 
   useEffect(() => {
     loadQuestions();
@@ -44,17 +44,13 @@ export default function QuizSection(props) {
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [props.section]);
 
-  function operation()
-  {
-    alert("Hi");
-  }
   const loadQuestions = () => {
     readQuestionsFromFile("/Data/Questions/" + props.section.link)
       .then((data) => {
         let newRevealed = [];
         let newSelected = [];
         let newSubmitted = [];
-        data = [data[Math.floor(Math.random() * data.length)]]
+        data = [data[Math.floor(Math.random() * data.length)]];
         data.forEach((item) => {
           newRevealed.push(false);
           newSelected.push(-1);
@@ -113,13 +109,7 @@ export default function QuizSection(props) {
 
     setRevealed(newReveal);
   };
-  
-  const revealFormula = (index) =>{
-    let forReveal = [...formulaSheet];
-    forReveal[index] = !forReveal[index];
 
-    setFormula(forReveal);
-  }
   const onOptionSelected = (event, questionIndex) => {
     let newSelected = [...selected];
     newSelected[questionIndex] = parseInt(event.target.value);
@@ -149,14 +139,17 @@ export default function QuizSection(props) {
           {questions.map((question, index) => {
             return (
               <div className="question-section" key={"Q" + index}>
-                <p className="question-heading">Question {index + 1}
-                {
-                  
-                <img id="formulaImg" src={formulaSheet && "/Data/formula.jpg"}alt=""/>
-                }
-                <button id="formulaBtn" onClick={()=>operation()}>Formula</button>
-                
-                </p>
+                <div id="formulaContainer">
+                  <button
+                    id="formulaBtn"
+                    onClick={() => setShowFormula(!showFormula)}
+                  >
+                    {showFormula ? "Hide Formula": "Show Formula"}
+                  </button>{" "} 
+                  {showFormula && <img src="/Data/formula.jpg" alt="" />}
+                </div>
+
+                <p className="question-heading">Question {index + 1}</p>
                 <p className="question-text">{question.questionText}</p>
 
                 <div
@@ -192,7 +185,7 @@ export default function QuizSection(props) {
                   Submit
                 </button>
 
-                <br/>
+                <br />
 
                 {submitted[index] && (
                   <button

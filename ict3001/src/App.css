@@ -194,10 +194,14 @@ iframe.youtube-video {
   font-size: larger;
 }
 #formulaBtn{
-  float:right;
+  display: block;
+  right: 0px;
 }
-#formulaImg{
-  float:right;
+#formulaContainer{
+  position: fixed;
+  right: 0; 
+  z-index: 5;
+  margin-right: 30px;
 }
 .question-section {
   border-bottom: grey 1px solid;
