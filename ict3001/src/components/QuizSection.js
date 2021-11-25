@@ -139,14 +139,15 @@ export default function QuizSection(props) {
           {questions.map((question, index) => {
             return (
               <div className="question-section" key={"Q" + index}>
+
                 <div id="formulaContainer">
-                  <button
+                <button
                     id="formulaBtn"
                     onClick={() => setShowFormula(!showFormula)}
                   >
                     {showFormula ? "Hide Formula": "Show Formula"}
                   </button>{" "} 
-                  {showFormula && <img src="/Data/formula.jpg" alt="" />}
+                  {showFormula && <img id="imgFormula" src="/Data/formula.jpg" alt="" />}
                 </div>
 
                 <p className="question-heading">Question {index + 1}</p>

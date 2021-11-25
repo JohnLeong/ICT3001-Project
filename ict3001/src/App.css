@@ -202,6 +202,10 @@ iframe.youtube-video {
   right: 0; 
   z-index: 5;
   margin-right: 30px;
+  
+}
+#imgFormula{
+  border-style:solid;
 }
 .question-section {
   border-bottom: grey 1px solid;
