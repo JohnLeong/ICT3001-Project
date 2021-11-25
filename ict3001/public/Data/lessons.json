@@ -1,26 +1,8 @@
 [
     {
-      "name": "Algebra",
+      "name": "Differential Elements and Applications: Finding the Length of a Curve",
       "description":
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed eget lacus quis felis condimentum",
-      "link": "/algebra"
-    },
-    {
-      "name": "Recursion",
-      "description":
-        "Recursion is recursion is recursion is recursion is recursion is recursion is recursion is recursion is recursion is recursion is recursion is",
-      "link": "/algebra"
-    },
-    {
-      "name": "Algebra2",
-      "description":
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed eget lacus quis felis condimentum",
-      "link": "/algebra"
-    },
-    {
-      "name": "Algebra3",
-      "description":
-        "Lorem ipsum doloProin volutpat sodales finibu",
-      "link": "/algebra"
+        "In this section, you'll learn about using differentiation and integration to find the length of a curve using the distance between two small points on it. You'll also be able to test your new knowledge in some assessment questions.",
+      "link": "/DifferentialElements01"
     }
   ]

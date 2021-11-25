@@ -1,0 +1,29 @@
+{
+    "name": "Differential Elements and Applications: Finding the Length of a Curve",
+    "sections": [
+        {
+            "name": "Differential Elements and Applications: Finding the Length of a Curve",
+            "type": "Video",
+            "link": "ICT3001_ProjectVideo.mp4",
+            "description": "In this video, you'll learn about using differentiation and integration to find the length of a curve using the distance between two small points on it."
+        },
+        {
+            "name": "Question 1",
+            "type": "Quiz",
+            "link": "questions01variants.txt",
+            "description": ""
+        },
+        {
+            "name": "Question 2",
+            "type": "Quiz",
+            "link": "questions02variants.txt",
+            "description": ""
+        },
+        {
+            "name": "Question 3",
+            "type": "Quiz",
+            "link": "questions03variants.txt",
+            "description": ""
+        }
+    ]
+}
