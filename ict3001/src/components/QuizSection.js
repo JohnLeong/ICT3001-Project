@@ -9,7 +9,7 @@ export default function QuizSection(props) {
   const [revealed, setRevealed] = useState([]);
   const [submitted, setSubmitted] = useState([]);
   const [selected, setSelected] = useState([]);
-  const [formulaSheet, setFormula] = useState([false]);
+  const [formulaSheet, setFormula] = useState([]);
 
   useEffect(() => {
     loadQuestions();
@@ -113,7 +113,13 @@ export default function QuizSection(props) {
 
     setRevealed(newReveal);
   };
+  
+  const revealFormula = (index) =>{
+    let forReveal = [...formulaSheet];
+    forReveal[index] = !forReveal[index];
 
+    setFormula(forReveal);
+  }
   const onOptionSelected = (event, questionIndex) => {
     let newSelected = [...selected];
     newSelected[questionIndex] = parseInt(event.target.value);
@@ -146,7 +152,7 @@ export default function QuizSection(props) {
                 <p className="question-heading">Question {index + 1}
                 {
                   
-                <img id="formulaImg" src={"/Data/formula.jpg"}alt=""/>
+                <img id="formulaImg" src={formulaSheet && "/Data/formula.jpg"}alt=""/>
                 }
                 <button id="formulaBtn" onClick={()=>operation()}>Formula</button>
                 
